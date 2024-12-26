@@ -1,0 +1,169 @@
+form {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  padding: 0.7rem 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+input[type="text"]:focus {
+  outline: none;
+  border: 2px solid #22c55e;
+}
+
+.error-msg {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ef4444;
+}
+
+svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.urgentInput {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  margin-right: 8px;
+}
+
+.wrapper label {
+  color: #374151;
+}
+
+.btn {
+  color: white;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: #22c55e;
+  transition: 0.2s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #16a34a;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats-container .box {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.box .count {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.count-completed {
+  color: #22c55e !important;
+}
+
+.count-urgent {
+  color: #f97316 !important;
+}
+
+.box .lebel {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.todo-item.todo-completed {
+  opacity: 0.75;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.todo-toggle {
+  color: #6b7280;
+  transition: color 0.2s ease;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.todo-toggle:hover {
+  color: #16a34a;
+}
+
+.todo-check-icon,
+.todo-circle-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 1px;
+}
+
+.todo-title {
+  color: #1f2937;
+}
+
+.todo-title-completed {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.todo-urgent-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f97316;
+}
+
+.todo-delete {
+  color: #d1d5db;
+  transition: color 0.2s ease;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-delete:hover {
+  color: #ef4444;
+}
+
+.todo-trash-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
