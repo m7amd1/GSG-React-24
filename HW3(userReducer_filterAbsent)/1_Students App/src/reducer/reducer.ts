@@ -1,13 +1,12 @@
 import { IStudent } from "../types";
 
-// Define action types
 type Action =
   | { type: "incrementAbsent"; id: string }
   | { type: "decrementAbsent"; id: string }
   | { type: "resetAbsent"; id: string }
-  | { type: "setAbsents"; id: string; absents: number };
+  | { type: "setAbsents"; id: string; absents: number }
+  | { type: "filterAbsent"; minAbsents: number };
 
-// Reducer function to manage the state
 const reducer = (state: IStudent[], action: Action): IStudent[] => {
   switch (action.type) {
     case "incrementAbsent":
@@ -32,6 +31,8 @@ const reducer = (state: IStudent[], action: Action): IStudent[] => {
           ? { ...student, absents: action.absents }
           : student
       );
+    case "filterAbsent":
+      return state.filter((student) => student.absents >= action.minAbsents);
     default:
       return state;
   }
